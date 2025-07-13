@@ -1,0 +1,101 @@
+.not-found-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full viewport height */
+  background-color: #f8f9fa; /* Light background */
+  font-family: 'Arial', sans-serif; /* A common, readable font */
+  color: #343a40; /* Dark grey text for contrast */
+  text-align: center; /* Center align all text within the container */
+  padding: 20px; /* Some padding on smaller screens */
+  box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+.content-wrapper {
+  max-width: 600px; /* Limit content width */
+  padding: 40px;
+  background-color: #ffffff; /* White background for the content box */
+  border-radius: 8px; /* Slightly rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.title {
+  font-size: 8em; /* Large 404 */
+  font-weight: bold;
+  color: #dc3545; /* A strong red for error indication */
+  margin-bottom: 10px;
+  line-height: 1; /* Remove extra space above/below */
+}
+
+.subtitle {
+  font-size: 2.5em; /* Prominent subtitle */
+  font-weight: 600;
+  color: #212529; /* Darker text for importance */
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #6c757d; /* Slightly lighter text for description */
+}
+
+.home-button {
+  display: inline-block; /* Allows padding and margin */
+  background-color: #007bff; /* A standard blue for primary actions */
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none; /* Remove underline */
+  font-weight: bold;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+  border: none; /* No default button border */
+}
+
+.home-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Optional: For a contact link */
+/*
+.contact-link {
+  margin-top: 15px;
+  display: block;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 0.95em;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+*/
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .title {
+    font-size: 6em;
+  }
+  .subtitle {
+    font-size: 2em;
+  }
+  .content-wrapper {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 4em;
+  }
+  .subtitle {
+    font-size: 1.5em;
+  }
+  .description {
+    font-size: 1em;
+  }
+  .home-button {
+    padding: 10px 20px;
+  }
+}
