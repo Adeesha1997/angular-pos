@@ -1,0 +1,97 @@
+/* Main Footer Container */
+.app-footer {
+  background-color: #2c3e50; /* Same dark blue-grey as header */
+  color: #ecf0f1; /* Light grey text */
+  padding: 40px 20px 20px; /* More padding for footer content */
+  font-size: 0.9em;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle top border */
+}
+
+/* Inner Container for Layout using CSS Grid */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsive grid columns */
+  gap: 30px; /* Space between grid items */
+  max-width: 1200px; /* Max width for content */
+  margin: 0 auto; /* Center the container */
+  margin-bottom: 30px; /* Space before bottom copyright */
+}
+
+/* Styling for each Footer Section */
+.footer-section h3 {
+  color: #6dd5ed; /* Light blue accent for headings */
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  border-bottom: 1px solid rgba(109, 213, 237, 0.3); /* Subtle underline */
+  padding-bottom: 10px;
+}
+
+.footer-section p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px; /* Space between list items */
+}
+
+.footer-section a {
+  text-decoration: none;
+  color: #ecf0f1;
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.footer-section a:hover {
+  color: #6dd5ed; /* Light blue on hover */
+}
+
+/* Social Media Icons Styling */
+.social-icons a {
+  display: inline-flex; /* For text and icon if using Font Awesome */
+  align-items: center;
+  color: #ecf0f1;
+  font-size: 1.5em; /* Size for icons */
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.social-icons a:hover {
+  color: #6dd5ed;
+}
+
+/* Bottom Copyright Bar */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  margin-top: 20px;
+  color: #bdc3c7; /* Slightly darker grey for copyright text */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr; /* Stack sections vertically on smaller screens */
+    text-align: center;
+  }
+  .footer-section h3 {
+      border-bottom: none; /* Remove underline if sections are stacked (optional) */
+  }
+  .social-icons {
+      justify-content: center; /* Center social icons when stacked */
+      display: flex;
+  }
+  .footer-section ul {
+      text-align: center; /* Center list items when stacked */
+  }
+}

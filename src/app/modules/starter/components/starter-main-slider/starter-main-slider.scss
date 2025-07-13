@@ -1,0 +1,81 @@
+.simple-slider-section {
+  max-width: 900px; /* Overall max width for the simplified slider */
+  margin: 40px auto; /* Center with top/bottom margin */
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: relative; /* For positioning nav buttons */
+  overflow: hidden; /* To hide non-active slides */
+}
+
+.simple-slides-container {
+  position: relative;
+  height: 300px; /* Fixed height for all slides */
+}
+
+.simple-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.5s ease-in-out; /* Simple fade transition */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.simple-slide.active {
+  opacity: 1; /* Only the active slide is visible */
+}
+
+.simple-slide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image covers area */
+  z-index: 1; /* Behind content */
+}
+
+.simple-slide-content {
+  position: relative;
+  z-index: 2; /* Above image */
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  border-radius: 5px;
+}
+
+.simple-slide-content h3 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.simple-slide-content p {
+  font-size: 1em;
+}
+
+/* Simple Navigation Buttons */
+.simple-nav-buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.simple-nav-btn {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: default; /* Indicates no interactivity */
+  font-size: 1.5em;
+  border-radius: 3px;
+}
