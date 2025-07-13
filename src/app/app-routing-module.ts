@@ -5,7 +5,7 @@ import { NotFoundPage } from './components/not-found-page/not-found-page';
 const routes: Routes = [
   { 
     path: '', 
-    redirectTo: 'starter', 
+    redirectTo: 'starter/home', 
     pathMatch: 'full' },
   {
     path: 'security',
