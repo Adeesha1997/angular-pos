@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { NotFoundPage } from './components/not-found-page/not-found-page';
+import {CookieService} from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NotFoundPage } from './components/not-found-page/not-found-page';
     AppRoutingModule
   ],
   providers: [
-    provideBrowserGlobalErrorListeners()
+    CookieService,
+    provideBrowserGlobalErrorListeners(),
   ],
   bootstrap: [App]
 })
